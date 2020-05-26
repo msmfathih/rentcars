@@ -157,7 +157,7 @@ public class Driverinput {
 	
 		dropdown2.selectByVisibleText("District only");
 		
-		Thread.sleep(1500);
+		Thread.sleep(3000);
 		//driver.findElement(By.class("btn-submit")).click();
 		
 		driver.findElement(By.id("submitBtn")).click();
