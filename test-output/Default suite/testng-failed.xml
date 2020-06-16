@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Driverdetails.Driverinput">
+      <class name="testNGdemo.Owner_Registration_TestNG">
         <methods>
-          <include name="driverRegistration"/>
-          <include name="loginModule"/>
+          <include name="setUpTest"/>
+          <include name="verifyElements"/>
+          <include name="tearDownTest"/>
         </methods>
-      </class> <!-- Driverdetails.Driverinput -->
+      </class> <!-- testNGdemo.Owner_Registration_TestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

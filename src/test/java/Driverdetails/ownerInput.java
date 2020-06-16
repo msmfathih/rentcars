@@ -44,9 +44,7 @@ public class ownerInput {
 
 	public static void loginModule(WebDriver driver) throws InterruptedException {
 		
-		WebElement websiteName = driver.findElement(By.xpath("//*[@id=\"app\"]/nav/div/a"));
-		
-		
+		WebElement websiteName = driver.findElement(By.xpath("//*[@id=\"app\"]/nav/div/a"));		
 		
 		if(websiteName.isDisplayed()) 
 		{
@@ -57,7 +55,7 @@ public class ownerInput {
 		}
 	
 		  driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("admin@gmail.com");
-		  Thread.sleep(3000);
+		  Thread.sleep(3000); 
 		  driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("admin@123");
 		  Thread.sleep(3000);
 		 			  
@@ -76,18 +74,19 @@ public class ownerInput {
 
 	public static void ownerRegistration(WebDriver driver) throws InterruptedException {
 		
-		//String filePath="C:\\Users\\fathih\\eclipse-workspace\\RentVehicals\\images\\licenece copy.jpeg";
 		
 		driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/div[4]/div/div/nav/ul/li[1]")).click();
-									 
+		
 		Thread.sleep(3000);
+		
 		driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/div[4]/div/div/nav/ul/li[1]/ul/li[1]/a")).click();
+									
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/div/a")).click();
 		Thread.sleep(1500);
 		
-		driver.findElement(By.id("name")).sendKeys("Test");
+		driver.findElement(By.id("name")).sendKeys("Test1");
 		Thread.sleep(1500);
 		
 		driver.findElement(By.name("nic")).sendKeys("43534535325v");

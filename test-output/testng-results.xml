@@ -1,101 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="85" started-at="2020-05-26T22:27:27 GST" finished-at="2020-05-26T22:27:27 GST">
+  <suite name="Default suite" duration-ms="21102" started-at="2020-06-16T08:16:24 GST" finished-at="2020-06-16T08:16:45 GST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="85" started-at="2020-05-26T22:27:27 GST" finished-at="2020-05-26T22:27:27 GST">
-      <class name="Driverdetails.Driverinput">
-        <test-method status="FAIL" signature="driverRegistration(org.openqa.selenium.WebDriver)[pri:0, instance:Driverdetails.Driverinput@1f36e637]" name="driverRegistration" duration-ms="0" started-at="2020-05-26T22:27:27 GST" finished-at="2020-05-26T22:27:27 GST">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Cannot inject @Test annotated Method [driverRegistration] with [interface org.openqa.selenium.WebDriver].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Cannot inject @Test annotated Method [driverRegistration] with [interface org.openqa.selenium.WebDriver].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:441)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:712)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1257)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+    <test name="Default test" duration-ms="21102" started-at="2020-06-16T08:16:24 GST" finished-at="2020-06-16T08:16:45 GST">
+      <class name="testNGdemo.Owner_Registration_TestNG">
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:testNGdemo.Owner_Registration_TestNG@d44fc21]" name="setUpTest" is-config="true" duration-ms="5516" started-at="2020-06-16T08:16:18 GST" finished-at="2020-06-16T08:16:24 GST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- driverRegistration -->
-        <test-method status="FAIL" signature="loginModule(org.openqa.selenium.WebDriver)[pri:0, instance:Driverdetails.Driverinput@1f36e637]" name="loginModule" duration-ms="0" started-at="2020-05-26T22:27:27 GST" finished-at="2020-05-26T22:27:27 GST">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Cannot inject @Test annotated Method [loginModule] with [interface org.openqa.selenium.WebDriver].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Cannot inject @Test annotated Method [loginModule] with [interface org.openqa.selenium.WebDriver].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:441)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:712)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1257)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        </test-method> <!-- setUpTest -->
+        <test-method status="PASS" signature="verifyLoginPage()[pri:0, instance:testNGdemo.Owner_Registration_TestNG@d44fc21]" name="verifyLoginPage" duration-ms="21035" started-at="2020-06-16T08:16:24 GST" finished-at="2020-06-16T08:16:45 GST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginModule -->
-      </class> <!-- Driverdetails.Driverinput -->
+        </test-method> <!-- verifyLoginPage -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:testNGdemo.Owner_Registration_TestNG@d44fc21]" name="tearDownTest" is-config="true" duration-ms="1955" started-at="2020-06-16T08:16:45 GST" finished-at="2020-06-16T08:16:47 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- testNGdemo.Owner_Registration_TestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

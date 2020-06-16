@@ -1,5 +1,6 @@
 package Driverdetails;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -7,24 +8,35 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 
 
 public class Driverinput {
 
     
+	static ExtentHtmlReporter htmlReporter;
+	static ExtentReports extent;
+
+	
 	public static void main(String[] args) throws InterruptedException {
 		
-		
+		htmlReporter = new ExtentHtmlReporter("extent2.html");
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+
+			
 		String projectLocation = System.getProperty("user.dir");
 		
 		System.setProperty("webdriver.chrome.bin", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
 				
 		System.setProperty("webdriver.chrome.driver", projectLocation+"\\lib\\chromedriver\\chromedriver.exe");
 				
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://rent.multicompetition.com/login");
+		WebDriver driver = new ChromeDriver(); 
+		driver.get("http://rent.multicompetition.com/ ");
 				
 	    //driver.manage().deleteAllCookies();
 	    
@@ -34,20 +46,26 @@ public class Driverinput {
 	      
 	    Driverinput.loginModule(driver);
 	    
-	    Driverinput.driverRegistration(driver);
+	    String email ;
+	    for(int i=0 ; i< 1 ;i++) {
+	    	email = "ashikafathih6"+i+"@gmail.com";
 	    	
-	    Thread.sleep(1500);
-	   // driver.quit();
+	    	 Driverinput.driverRegistration(driver,email);
+	    }
+	    
+	  
+	   //driver.quit();
 	   	    
 	}
 	
 
 	public static void loginModule(WebDriver driver) throws InterruptedException {
 		
+		ExtentTest test = extent.createTest("fillFormTest", "Fill the required details");
+		
 		WebElement websiteName = driver.findElement(By.xpath("//*[@id=\"app\"]/nav/div/a"));
 		
-		
-		
+			
 		if(websiteName.isDisplayed()) 
 		{
 			System.out.println("Name is displayed");
@@ -73,26 +91,34 @@ public class Driverinput {
 		  }
 		  
 	}
-	
 
-	public static void driverRegistration(WebDriver driver) throws InterruptedException {
+	
+	
+	public static void driverRegistration(WebDriver driver,String email) throws InterruptedException {
 		
+		
+		ExtentTest test = extent.createTest("fillFormTest", "Fill the required details");
+		
+		//click driver button 
 		String filePath="C:\\Users\\fathih\\eclipse-workspace\\RentVehicals\\images\\licenece copy.jpeg";
 		
 		driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/div[4]/div/div/nav/ul/li[2]/a/p")).click();
+									 
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/div[4]/div/div/nav/ul/li[2]/ul/li[1]/a/p")).click();
 		Thread.sleep(2000);
 		
+		
 		//Register Driver details
+		
 		//driver name
-	    driver.findElement(By.name("name")).sendKeys("fathih");
+	    driver.findElement(By.name("name")).sendKeys("ashikafathih");
 		Thread.sleep(1500);
 		//phone number
-		driver.findElement(By.name("mobile_number")).sendKeys("0528542762");
+		driver.findElement(By.name("mobile_number")).sendKeys("0770728768");
 		Thread.sleep(1500);
-		//email		
-		driver.findElement(By.name("email")).sendKeys("admin@123.com");
+		//email		 
+		driver.findElement(By.name("email")).sendKeys(email);
 		Thread.sleep(1500);
 		//password		
 		driver.findElement(By.name("password")).sendKeys("123456");
@@ -110,19 +136,12 @@ public class Driverinput {
 		driver.findElement(By.name("vehicle_number")).sendKeys("56665656");
 		Thread.sleep(1500);
 		
-		driver.findElement(By.name("is_vehicle_owner")).sendKeys("1");
+		driver.findElement(By.name("is_vehicle_owner")).sendKeys("0");
 		Thread.sleep(1500);
 		
-	   //driver.findElement(By.name("vehicle_type_id")).sendKeys("2");
-		
-		//WebElement Vehicle_type=driver.findElement(By.name("vehicle_type_id"));
-		
-//		Select Vehi_type=new Select(Vehicle_type);
-//		
-//		Vehi_type.selectByIndex(2);
 		
 		Select dropdown = new Select(driver.findElement(By.xpath("//select[@name='vehicle_type_id']")));
-	dropdown.selectByVisibleText("Van");
+	    dropdown.selectByVisibleText("Van");
 		
 	//	Select select = new Select(driver.findElement(By.xpath("//select")));
 //		WebElement option = dropdown.getFirstSelectedOption();
@@ -139,37 +158,34 @@ public class Driverinput {
 		uploadButton2.sendKeys(filePath);
 
 		driver.findElement(By.name("engine_number")).sendKeys("123423xd");
+		Thread.sleep(1500);
 		driver.findElement(By.name("chassis_number")).sendKeys("1sfs");
-		
+		Thread.sleep(1500);
 		WebElement uploadButton3=driver.findElement(By.name("vehicle_registration_copy"));
 		uploadButton3.sendKeys(filePath);
-		
+		Thread.sleep(1500);
 		WebElement uploadButton4=driver.findElement(By.name("photo"));
 		uploadButton4.sendKeys(filePath);
-		
+		Thread.sleep(1500);
 		driver.findElement(By.name("parking_location")).sendKeys("beruwala");
 		Thread.sleep(1500);
 		driver.findElement(By.name("prefer_time_from")).sendKeys("10:12 PM");
 		Thread.sleep(1500);
 		driver.findElement(By.name("prefer_time_to")).sendKeys("12:12 PM");
 		Thread.sleep(1500);
-		Select dropdown2 = new Select(driver.findElement(By.xpath("//select[@name='prefer_location_to_hire']")));
-	
-		dropdown2.selectByVisibleText("District only");
 		
-		Thread.sleep(3000);
+		Select dropdown2 = new Select(driver.findElement(By.xpath("//select[@name='prefer_location_to_hire']")));
+		dropdown2.selectByVisibleText("Islandwide");
+		
+		
+		Thread.sleep(1500);
 		//driver.findElement(By.class("btn-submit")).click();
 		
-		driver.findElement(By.id("submitBtn")).click();
-		
-		//Thread.sleep(3000);
-		
-		
-		
-		
-		
+		driver.findElement(By.xpath("//*[@id=\"submitBtn\"]")).click();
 		  
-		
+
+		extent.flush();
+		driver.quit();
       }
 		
 	}
