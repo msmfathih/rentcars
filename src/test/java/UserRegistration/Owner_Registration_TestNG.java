@@ -1,4 +1,4 @@
-package testNGdemo;
+package UserRegistration;
 
 import static org.testng.Assert.assertTrue;
 

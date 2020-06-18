@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="testNGdemo.Owner_Registration_TestNG" duration-ms="39998" started-at="2020-06-06T18:30:26 GST" finished-at="2020-06-06T18:31:06 GST">
+  <suite name="ShoppingMall.addProduct" duration-ms="41419" started-at="2020-06-17T21:13:47 GST" finished-at="2020-06-17T21:14:28 GST">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="39998" started-at="2020-06-06T18:30:26 GST" finished-at="2020-06-06T18:31:06 GST">
-      <class name="testNGdemo.Owner_Registration_TestNG">
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:testNGdemo.Owner_Registration_TestNG@4dfa3a9d]" name="setUpTest" is-config="true" duration-ms="5690" started-at="2020-06-06T18:30:26 GST" finished-at="2020-06-06T18:30:32 GST">
+    <test name="Command line test" duration-ms="41419" started-at="2020-06-17T21:13:47 GST" finished-at="2020-06-17T21:14:28 GST">
+      <class name="ShoppingMall.addProduct">
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:ShoppingMall.addProduct@6500df86]" name="setUpTest" is-config="true" duration-ms="7714" started-at="2020-06-17T21:13:47 GST" finished-at="2020-06-17T21:13:55 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="testStep()[pri:0, instance:testNGdemo.Owner_Registration_TestNG@4dfa3a9d]" name="testStep" duration-ms="30054" started-at="2020-06-06T18:30:32 GST" finished-at="2020-06-06T18:31:02 GST">
+        <test-method status="PASS" signature="changeProductPrice()[pri:0, instance:ShoppingMall.addProduct@6500df86]" name="changeProductPrice" duration-ms="2" started-at="2020-06-17T21:13:55 GST" finished-at="2020-06-17T21:13:55 GST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testStep -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:testNGdemo.Owner_Registration_TestNG@4dfa3a9d]" name="tearDownTest" is-config="true" duration-ms="4197" started-at="2020-06-06T18:31:02 GST" finished-at="2020-06-06T18:31:06 GST">
+        </test-method> <!-- changeProductPrice -->
+        <test-method status="PASS" signature="testProduct()[pri:1, instance:ShoppingMall.addProduct@6500df86]" name="testProduct" duration-ms="15428" started-at="2020-06-17T21:13:55 GST" finished-at="2020-06-17T21:14:10 GST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownTest -->
-      </class> <!-- testNGdemo.Owner_Registration_TestNG -->
+        </test-method> <!-- testProduct -->
+        <test-method status="PASS" signature="addNewProduct()[pri:2, instance:ShoppingMall.addProduct@6500df86]" name="addNewProduct" duration-ms="18210" started-at="2020-06-17T21:14:10 GST" finished-at="2020-06-17T21:14:28 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewProduct -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ShoppingMall.addProduct@6500df86]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-06-17T21:14:28 GST" finished-at="2020-06-17T21:14:28 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ShoppingMall.addProduct -->
     </test> <!-- Command line test -->
-  </suite> <!-- testNGdemo.Owner_Registration_TestNG -->
+  </suite> <!-- ShoppingMall.addProduct -->
 </testng-results>

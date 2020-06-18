@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGdemo.Owner_Registration_TestNG">
+      <class name="ShoppingMall.addProduct">
         <methods>
+          <include name="testProduct"/>
+          <include name="tearDown"/>
+          <include name="addNewProduct"/>
           <include name="setUpTest"/>
-          <include name="verifyElements"/>
-          <include name="tearDownTest"/>
+          <include name="verifyAdminUsers"/>
         </methods>
-      </class> <!-- testNGdemo.Owner_Registration_TestNG -->
+      </class> <!-- ShoppingMall.addProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,4 +1,4 @@
-package testNGdemo;
+package UserRegistration;
 
 import java.util.concurrent.TimeUnit;
 
@@ -46,26 +46,23 @@ public class Driver_Registration_TestNG {
 			  System.out.println("Display error");
 			  System.out.println(e);
 		  }		
+		  
+			driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/div[4]/div/div/nav/ul/li[2]/a")).click();
+	 		 
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//p[contains(text(),'Register Drivers')]")).click();
+			Thread.sleep(2000);
 
 	}
 
 
 
-	@Test
+	@Test(priority=1)
 	public void fillForm1() throws InterruptedException {
 		
-		
-
 		String filePath="C:\\Users\\fathih\\eclipse-workspace\\RentVehicals\\images\\licenece copy.jpeg";
-		
-		driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/div[4]/div/div/nav/ul/li[2]/a/p/text()")).click();
-									 
-		 
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/div[4]/div/div/nav/ul/li[2]/ul/li[1]/a/p")).click();
-		Thread.sleep(2000);
 
-		driver.findElement(By.name("name")).sendKeys("fathih");
+		driver.findElement(By.xpath("//input[@name='name']"));
 		Thread.sleep(1500);
 		//phone number
 		driver.findElement(By.name("mobile_number")).sendKeys("0770728768");
@@ -140,6 +137,8 @@ public class Driver_Registration_TestNG {
 	public void fillForm2 () throws InterruptedException {
 
 		String filePath="C:\\Users\\fathih\\eclipse-workspace\\RentVehicals\\images\\licenece copy.jpeg";
+		
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/section/div/div[1]/form/div/div[1]/input")).sendKeys("fathih");
 
 		driver.findElement(By.name("vehicle_number")).sendKeys("56665656");
 		Thread.sleep(1500);
@@ -159,11 +158,14 @@ public class Driver_Registration_TestNG {
 		Thread.sleep(1500);
 		driver.findElement(By.name("chassis_number")).sendKeys("1sfs");
 		Thread.sleep(1500);
+		
 		WebElement uploadButton3=driver.findElement(By.name("vehicle_registration_copy"));
 		uploadButton3.sendKeys(filePath);
+		
 		Thread.sleep(1500);
 		WebElement uploadButton4=driver.findElement(By.name("photo"));
 		uploadButton4.sendKeys(filePath);
+		
 		Thread.sleep(1500);
 		driver.findElement(By.name("parking_location")).sendKeys("beruwala");
 		Thread.sleep(1500);
